@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toDo-app">
+            <h2>toDo <img src="./assets/img/icon.png" alt="icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add text">
+                <button onclick="addTask()" id="input-button">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">task1</li>
+                <li>task2</li>
+                <li>task3</li> -->
+            </ul>
+        </div>
+        <button class="data-button" onclick="showModal()">Your Data</button>
+
+        <div class="modal-container" id="modal-container">
+            <div class="modal-content">
+                <h3>Your Data Information</h3>
+                <p>Your data is stored locally in your browser using <a href="https://developer.chrome.com/docs/devtools/storage/localstorage/?utm_source=devtools" target="_blank"><strong>localStorage</strong></a>.</p>
+                <p>This ensures that the user's toDo list remains consistent and available across browser sessions.</p>
+                <p>Retrieving the data from localStorage when the page loads allows the application to initialize with the previously saved state, providing a seamless and continuous user experience.</p>
+                <p>If you want to clear your data, your entire toDo list will be permanently deleted from this device.</p>
+                <button onclick="closeModal()" class="cancel">Cancel</button>
+                <button onclick="clearLocalStorage()" class="clear">Clear Data</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
